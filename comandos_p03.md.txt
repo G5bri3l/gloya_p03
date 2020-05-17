@@ -1,0 +1,56 @@
+# Comandos de la Práctica 03
+## Gabriel Loya Sánchez
+
+## Parte I. 
+
+
+01. Preguntas
+1.1 ¿A qué organismo pertenece? Mycoplasma genitalium strain G-37 16S ribosomal RNA
+1.2 ¿Es un gen o una región genómica de importancia?  gen
+1.3 ¿Qué es un marcador molecular? 
+Cualquier carácter o rasgo carasteristico de un organismo. Debe ser heredable y controlada geneticamente, por leyes mendelianas.
+permite rastrear su herencia a lo largo de generaciones
+
+1.4 ¿Cuál es la importancia de este tipo de marcador en particular?
+El rRNA codificante para la subunidad 16s es una region altamente conservada entre baterias y archeas, uno de los componentes básicos de todas las células eucariotas, usada como reloj molecular en análisis molecular y reconstrucción de la historia evolutiva de los organismos, adecuado para reconocer los cambios en lugar y tiempo, clasificación de bacterias y conformar bases de datos especializadas.
+
+2. tabla
+tipos de blast
+BLASTN - Compara una secuencia de ADN con base de datos de DNA. Busca en ambos hilos automáticamente. Está optimizado para la velocidad, en lugar de la sensibilidad.
+BLASTP - Compara una secuencia de proteínas con una base de datos de proteínas.
+BLASTX - Compara una secuencia de ADN con ununa base de datos de proteínas, traduciendo la secuencia de consulta en los 6 marcos posibles, y comparando cada uno con la búsqueda en la base de datos (3 marcos de lectura de cada cadena del ADN).
+TBLASTN - Compara una consulta de proteínas con una base de datos de ADN, en los 6 marcos posibles de la base de datos.
+smartblast: encuentra proteínas muy similares a su consulta
+primerblast: diseña primers específicos para su plantilla de PCR
+igblast: busca inmunoglobulinas y secuencias de receptores de células T
+mole-blast: establece la taxonomía para secuencias no cultivadas o ambientales
+
+
+3. Realiza la búsqueda de un artículo científico de tu interés dónde utilicen software específico de mapeo. Describe en un breve párrafo la metodología que utilizaron para realizar el mapeo. 
+
+# Parte II.
+
+1. Puentes de Königsberg
+-¿En qué consiste el problema de los puentes de la ciudad de Königsberg?
+se tienen dos grandes islas que están conectadas por 7 puentes. Se requeria encontrar una ruta donde se pudiera pasar por la ciudad cruzando cada puente una solo una vez y que el punto inicial no fuera el mismo que el punto final.
+
+-¿Por qué no tiene solución?
+De acuerdo a la teoría de grafos, cuando los nodos tienen valores impares será necesario trasncurrir dos al menos una vez por uno de los caminos. Para poder pasar solamente por cada arco solo una vez es necesario que se cumplan dos posibles supuestos: 
+que haya dos nodos de grado impar y los restantes pares o que todos los nodos sean de grado par.
+
+2. Explica: tres problemáticas comunes en la aplicación de las gráficas de Bruijin a genomas.
+Uno de los principales problemas es que debido a la metodología utilizada en la busqueda de un ciclo Hamiltoniano, se necesitaría un poder computacional mucho más potente que el que se tiene actualmente. 
+Por otro lado, en la busqueda de ciclos euclidianos que permitan resolver los problemas se hacen algunas suposiciones que no son del todo ciertas y pueden llevar a tener un problema mas complicado. Ejemplo de esto es el hecho que no todos lo k-meros pueden ser conocidos para un read, por lo que en realidad faltaría k-meros para poder tener una lectura fiel a los presentes en el genoma. Además, se asume que cada uno aparecerá efectivamente una vez en la lectura.
+Otra cuestión a considerar es que se considera un genoma de un cromosoma circular. Dato que solo pordía ser aplicable a ciertos organismos.
+ 
+3. N50 y L50 
+¿qué son? 
+Estadisticos para determinar la longitud de un genoma.
+
+¿en qué consisten?
+el N50 se define como la longitud de la secuencia del contig más corto en 50% de la longitud total del genoma. Lo que es igual a que si ordenamos los contigs del mayor al menor, el valor de N50 será aquel en el que al sumar n+1 nos de el 50% de la longitud total del genoma.
+L50 es la cantidad de secuencias sumadas para alcanzar el valor de N50
+EJ: se tienes 9 contigs con las longitudes 2,3,4,5,6,7,8,9, 10. Su valor total es 54. Su N50 será 8 ya que 10+9+8=57. Mientras que su L50 será 3.
+ 
+¿para qué se usan?
+Esencialmente dan información de la distribución de longitud de contigs en nu genoma. También se consideran descriptivos de la integridad de un ensamblaje del genoma.
